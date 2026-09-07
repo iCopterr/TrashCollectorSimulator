@@ -2,6 +2,13 @@
 
 This changelog begins with a consolidated handoff snapshot. Add future entries at the top with date, scope, Studio place version if known, validation performed, and remaining placeholders.
 
+## 2026-09-08 — Silent duplicate collection rejection
+
+- Kept the server-side active-collection guard but stopped `TrashSpotController` from showing the redundant `You're already collecting this` reward banner.
+- Preserved all other collection rejection feedback, including backpack-full and cooldown messages.
+- Mirrored the changed live `TrashSpotController` into the staged Rojo tree.
+- Validation: the live source compiled through `loadstring`, direct filter assertions passed for duplicate/other/success cases, and a one-player startup test stopped with no captured Output errors.
+
 ## 2026-09-08 — Pet multiplier moved to sell time
 
 - Changed collection rewards so backpack items and reward banners show configured base trash value with only the rolled mutation bonus; equipped pets are no longer baked into collected item values.

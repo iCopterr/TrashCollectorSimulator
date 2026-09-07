@@ -212,6 +212,7 @@ Major menus use `UITheme.RegisterModal`, background blur, and open/close transit
 
 - New discovery, collected-item reward, and collection progress must occupy coordinated, non-overlapping regions.
 - Starting a new collection must not be obscured by an old collected-item banner.
+- A duplicate interaction during an active collection is rejected silently; do not show the `You're already collecting this` reward banner.
 - Cooldown text must have high contrast.
 - Current-zone feedback is a Fredoka One-style stroked popup that rises and fades, not a persistent top banner.
 - HUD cash/backpack/World 1 Diamonds live below the navigation buttons and must remain on-screen at narrow mobile resolutions.

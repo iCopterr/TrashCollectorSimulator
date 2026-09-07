@@ -26,6 +26,7 @@ Run the sections affected by the change. For a new zone/system or data change, r
 - [ ] Spots are player-specific/random and obey zone bounds/spacing.
 - [ ] Locked-zone trash cannot be collected.
 - [ ] Collection duration is affected correctly by equipped tools.
+- [ ] Triggering the same spot again during an active collection is rejected without showing an `already collecting` banner.
 - [ ] Skill check sometimes appears and accepts a correctly timed hit.
 - [ ] MISS stops progress/UI immediately, grants nothing, and shows only a three-second cooldown.
 - [ ] GOOD/GREAT/PERFECT grant configured quantities.
