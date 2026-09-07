@@ -29,6 +29,8 @@ Run the sections affected by the change. For a new zone/system or data change, r
 - [ ] Skill check sometimes appears and accepts a correctly timed hit.
 - [ ] MISS stops progress/UI immediately, grants nothing, and shows only a three-second cooldown.
 - [ ] GOOD/GREAT/PERFECT grant configured quantities.
+- [ ] A normal collected item and reward banner show the configured base value without any equipped-pet multiplier.
+- [ ] Gold/Infected/Cosmic collected items and reward banners show base value multiplied only by the rolled mutation.
 - [ ] Success rerolls/replaces the spot immediately for that player.
 - [ ] Mutation aura matches Gold/Infected/Cosmic; no mutation banner appears.
 - [ ] Backpack-full rejection is clear and does not start a broken session.
@@ -38,7 +40,9 @@ Run the sections affected by the change. For a new zone/system or data change, r
 
 - [ ] Sell station faces the previous zone and prompt distance is reasonable.
 - [ ] Sell uses server backpack contents and configured values.
-- [ ] Mutations and equipped-pet formula produce expected cash.
+- [ ] Sell ignores forged/invalid stored item values, trash IDs, mutations, and tool multipliers.
+- [ ] Mutations and the currently equipped pet-team formula produce expected cash at sale time.
+- [ ] Equipping or unequipping a pet after collection but before selling changes the resulting sale value.
 - [ ] Cash flight/effect reaches HUD and comma formatting is correct.
 - [ ] Empty backpack and repeated sell interactions are safe.
 

@@ -16,10 +16,10 @@ Early zones should feel fast and welcoming. Later zones should take increasingly
 2. Find a client-visible randomized small or medium trash spot.
 3. Hold/interact to begin a 3–5 second collection.
 4. A single skill check may appear during collection.
-5. Success grants trash; better ratings can grant more and improve rarity odds.
-6. Mutations can greatly increase the item's value and are shown by a trash-spot aura.
+5. Success grants trash; better ratings can grant more and improve rarity odds. The reward UI shows each item's configured base value, with only its mutation value bonus included.
+6. Mutations can greatly increase the item's displayed/stored value and are shown by a trash-spot aura.
 7. Diamonds may drop on a successful collection.
-8. Sell the backpack at the zone's center sell station.
+8. Sell the backpack at the zone's center sell station; the server applies the currently equipped pet team's multiplier at that moment.
 9. Spend cash on the zone egg and hatch pets.
 10. Equip up to three pets; their multipliers add together.
 11. Hatch at least one pet from the current zone and save enough cash to unlock the next zone.
@@ -67,6 +67,7 @@ World 2 is planned around the Solar System. Do not implement World 2 or decide W
 - New pets are not auto-equipped.
 - The default equipment limit is three pets.
 - Equipped pet multipliers add: `17.1x + 8.2x + 15.3x = 40.6x`.
+- Pet income is applied when trash is sold, not when it is collected. Changing the equipped team before selling changes the sale multiplier for the backpack.
 - Equipped pets stay in their normal inventory position and are indicated by a star.
 - Sorting supports Default, Multiplier, Rarity, and Zone, with high/low direction where applicable.
 - The pet collection shows undiscovered pets as silhouettes/question marks.
@@ -91,7 +92,7 @@ Three mutations currently exist:
 - Infected: 12×, 1% base chance
 - Cosmic: 100×, 0.1% base chance
 
-Mutation chances can be improved by the equipped tool. Mutation and pet value bonuses use the existing additive combination formula rather than multiplying into an uncontrolled economy. Mutated pots use auras/effects; do not add a persistent mutation banner.
+Mutation chances can be improved by the equipped tool. At collection time, the reward value contains base value plus mutation only. At sale time, the server combines the mutation multiplier with the currently equipped pet-team multiplier using the existing additive formula rather than multiplying them into an uncontrolled economy. Mutated spots use auras/effects; do not add a persistent mutation banner.
 
 ## Currencies
 

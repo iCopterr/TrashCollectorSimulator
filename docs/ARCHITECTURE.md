@@ -112,11 +112,11 @@ Never rename or move these without updating `RemotesSetup`, bootstrap wiring, th
 
 ### Collect
 
-`TrashSpotController prompt` → `Trash.Interact` → `TrashSpotService validation` → `MiniGameService session` → client collection/skill-check UI → `MiniGame.Submit` → server validation → `RewardService` and `DiamondDropService` → `DataUpdate` + `MiniGame.Result` → reward/discovery/inventory effects.
+`TrashSpotController prompt` → `Trash.Interact` → `TrashSpotService validation` → `MiniGameService session` → client collection/skill-check UI → `MiniGame.Submit` → server validation → `RewardService` and `DiamondDropService` → `DataUpdate` + `MiniGame.Result` → reward/discovery/inventory effects. `RewardService` stores and reports the configured trash base value with only the rolled mutation bonus applied; it does not bake the pet multiplier into the backpack item.
 
 ### Sell
 
-Server-created station prompt → `SellService` callback → calculate backpack value from server data → clear sold items/add cash → `DataUpdate` + `Sell.Result` → cash flight/effects.
+Server-created station prompt → `SellService` callback → resolve every item through `TrashConfig`, validate persisted mutation/tool metadata, read the current equipped pet-team multiplier, and calculate the authoritative sale value → clear sold items/add cash → `DataUpdate` + `Sell.Result` → cash flight/effects. Mutation and pet multipliers use `PetConfig.CombinePetAndMutation`; the current team is evaluated at sale time.
 
 ### Egg
 

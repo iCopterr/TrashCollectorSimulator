@@ -53,5 +53,5 @@ This repository now contains a staged, partially managed Rojo 7 project in `defa
 - Install or update the matching Studio plugin with `rojo plugin install`.
 - Start the filesystem sync server from this folder with `rojo serve`.
 - In Studio, open the Rojo plugin and connect to `localhost:34872` only after confirming the correct place is open.
-- Do not treat the current empty `src` folders as a complete game export. The authoritative scripts must first be copied from the live Studio place into their matching service folders and verified before Rojo becomes the source of truth.
+- Do not treat the partially populated `src` folders as a complete game export. A few changed server scripts may be mirrored there for review and version control, but the remaining authoritative scripts and instances must be copied from the live Studio place into their matching service folders and verified before Rojo becomes the source of truth.
 - Generated image packs in `outputs/`, local place builds, backups, and duplicate root ZIP archives are excluded from Git.

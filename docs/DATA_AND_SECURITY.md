@@ -12,7 +12,7 @@ DiamondDropPity
   World1
 Backpack
   CapacityLevel
-  Items[]
+  Items[] = { Id, Rarity, Value, BaseValue, Mutation, MutationMultiplier, ToolMultiplier }
 Equipment
   Tool
   ToolLevel
@@ -64,6 +64,8 @@ The server must own and validate:
 - Shop/Robux receipt effects
 
 Client-provided fields should select among known server options only. They must never carry an authoritative price, multiplier, reward amount, rarity, item definition, CFrame, or ownership flag.
+
+Backpack `Value` is presentation data for the collected item: configured base trash value with the rolled mutation bonus, excluding pets. Selling must not trust this stored number. `SellService` resolves the trash ID and mutation against server configs, accepts only a legacy tool multiplier that matches a configured legacy tool, and applies the currently equipped pet team on the server. Unknown trash IDs and invalid multiplier metadata must never mint cash.
 
 ## Remote validation patterns
 

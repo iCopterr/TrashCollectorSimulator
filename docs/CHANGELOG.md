@@ -2,6 +2,15 @@
 
 This changelog begins with a consolidated handoff snapshot. Add future entries at the top with date, scope, Studio place version if known, validation performed, and remaining placeholders.
 
+## 2026-09-08 — Pet multiplier moved to sell time
+
+- Changed collection rewards so backpack items and reward banners show configured base trash value with only the rolled mutation bonus; equipped pets are no longer baked into collected item values.
+- Changed server-authoritative selling to resolve trash base values and mutation data from shared configs, validate legacy tool-value metadata against configured tools, and apply the player's current equipped pet-team multiplier when selling.
+- Preserved the existing additive pet/mutation formula (`pet + mutation - 1`) and the legacy cash-tool multiplier exactly once, while rejecting unknown trash IDs and invalid multiplier metadata.
+- Kept the existing client payload shape and reward UI binding; no remote or GUI contract was renamed.
+- Mirrored the three changed server scripts into the staged Rojo tree so this code change is reviewable in Git; the larger Studio-to-Rojo migration remains incomplete.
+- Validation: fresh-module formula checks covered normal and mutated collection values, current-pet sale values, valid legacy tool bonuses, invalid metadata, unknown IDs, empty backpacks, and repeated sells. The accessible Studio Output contained no new task-related errors, but a fresh one-player run could not start because the Studio bridge retained a stale `A test is already running` state after its stop signal.
+
 ## 2026-09-08 — Staged Rojo and GitHub foundation
 
 - Added a partially managed Rojo 7 project restricted to place ID `97825563424125`, with source roots for shared, server, client, GUI, and storage content.

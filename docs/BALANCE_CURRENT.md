@@ -140,7 +140,7 @@ Each zone is 300×300. Unlocks also require the previous zone itself. Diamond pi
 | Nuclear Wasteland | Radroach 2,180× | Mutant Hound 2,360× | Atomic Scorpion 2,540× | Reactor Golem 2,720× | Atomic Dragon 2,900× |
 | World's End Landfill | Scrapling Rat 3,250× | Landfill Hound 3,500× | Compactor Golem 3,750× | Methane Phoenix 4,025× | World Eater 4,300× |
 
-Base pet rarity weights are Common 45, Uncommon 30, Rare 15, Epic 9.9, and Legendary 0.1. There is no pity. Equip limit is three; multipliers add. Starting with Beach, every zone's Common pet is stronger than the previous zone's Legendary. Later egg and unlock prices are scaled against the preceding zone's increased expected pet income to preserve the target pacing.
+Base pet rarity weights are Common 45, Uncommon 30, Rare 15, Epic 9.9, and Legendary 0.1. There is no pity. Equip limit is three; multipliers add. The current equipped team is applied when the backpack is sold, while collection feedback shows base value plus mutation only. Mutation and pet value multipliers combine additively (`pet + mutation - 1`). Starting with Beach, every zone's Common pet is stronger than the previous zone's Legendary. Later egg and unlock prices are scaled against the preceding zone's increased expected pet income to preserve the target pacing.
 
 ## Collection and skill check
 
