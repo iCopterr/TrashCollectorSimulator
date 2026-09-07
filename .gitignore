@@ -1,0 +1,22 @@
+# Local Codex review and generated output
+/.codex-tmp/
+/outputs/
+
+# Generated Roblox place builds and backups
+/build/
+/dist/
+/*.rbxl
+/*.rbxlx
+/*.rbxl.lock
+/*.rbxlx.lock
+
+# Duplicate distributable archives kept outside source control
+/*.zip
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+.idea/
+

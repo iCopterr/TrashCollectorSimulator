@@ -1,0 +1,22 @@
+{
+  "pack": "TrashCollector_Full_UI_Asset_Pack_v2",
+  "generated": "2026-08-23",
+  "style": "colorful chunky Roblox simulator UI",
+  "folders": {
+    "Source_HighRes": "Original generated PNG files",
+    "RobloxReady_512": "Normalized 512x512 direct-upload PNG files"
+  },
+  "assets": [
+    {"file": "ui_texture_studs_tile.png", "role": "recolorable tiled panel texture", "transparent": false, "source_size": "1254x1254", "ready_size": "512x512"},
+    {"file": "ui_icon_shop.png", "role": "shop menu icon", "transparent": true, "source_size": "1254x1254", "ready_size": "512x512"},
+    {"file": "ui_icon_teleport.png", "role": "teleport menu icon", "transparent": true, "source_size": "1355x1160", "ready_size": "512x512"},
+    {"file": "ui_icon_book.png", "role": "collection book menu icon", "transparent": true, "source_size": "1389x1132", "ready_size": "512x512"},
+    {"file": "ui_icon_pets.png", "role": "pets menu icon", "transparent": true, "source_size": "1254x1254", "ready_size": "512x512"},
+    {"file": "ui_icon_cash.png", "role": "cash HUD icon", "transparent": true, "source_size": "1536x1024", "ready_size": "512x512"},
+    {"file": "ui_icon_inventory.png", "role": "inventory HUD icon", "transparent": true, "source_size": "1254x1254", "ready_size": "512x512"},
+    {"file": "ui_icon_equipped.png", "role": "equipped pets status icon", "transparent": true, "source_size": "1254x1254", "ready_size": "512x512"},
+    {"file": "ui_icon_mystery.png", "role": "locked or undiscovered pet icon", "transparent": true, "source_size": "1150x1368", "ready_size": "512x512"},
+    {"file": "ui_vfx_rarity_burst.png", "role": "pet hatch rarity reveal overlay", "transparent": true, "source_size": "1254x1254", "ready_size": "512x512"}
+  ]
+}
+

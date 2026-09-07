@@ -1,0 +1,45 @@
+{
+  "name": "TrashCollectorSimulator",
+  "servePort": 34872,
+  "servePlaceIds": [97825563424125],
+  "placeId": 97825563424125,
+  "gameId": 10656109909,
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "$path": "src/ReplicatedStorage",
+      "$ignoreUnknownInstances": true
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$path": "src/ServerScriptService",
+      "$ignoreUnknownInstances": true
+    },
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "$path": "src/ServerStorage",
+      "$ignoreUnknownInstances": true
+    },
+    "StarterGui": {
+      "$className": "StarterGui",
+      "$path": "src/StarterGui",
+      "$ignoreUnknownInstances": true
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$ignoreUnknownInstances": true,
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$path": "src/StarterPlayerScripts",
+        "$ignoreUnknownInstances": true
+      },
+      "StarterCharacterScripts": {
+        "$className": "StarterCharacterScripts",
+        "$path": "src/StarterCharacterScripts",
+        "$ignoreUnknownInstances": true
+      }
+    }
+  }
+}
+
