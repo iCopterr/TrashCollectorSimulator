@@ -13,8 +13,20 @@
     },
     "ServerScriptService": {
       "$className": "ServerScriptService",
-      "$path": "src/ServerScriptService",
-      "$ignoreUnknownInstances": true
+      "$ignoreUnknownInstances": true,
+      "ServerBootstrap": {
+        "$path": "src/ServerScriptService/ServerBootstrap.server.luau"
+      },
+      "Services": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "RewardService": {
+          "$path": "src/ServerScriptService/Services/RewardService.luau"
+        },
+        "SellService": {
+          "$path": "src/ServerScriptService/Services/SellService.luau"
+        }
+      }
     },
     "ServerStorage": {
       "$className": "ServerStorage",
@@ -31,8 +43,18 @@
       "$ignoreUnknownInstances": true,
       "StarterPlayerScripts": {
         "$className": "StarterPlayerScripts",
-        "$path": "src/StarterPlayerScripts",
-        "$ignoreUnknownInstances": true
+        "$ignoreUnknownInstances": true,
+        "ClientBootstrap": {
+          "$className": "LocalScript",
+          "$ignoreUnknownInstances": true,
+          "Controllers": {
+            "$className": "Folder",
+            "$ignoreUnknownInstances": true,
+            "TrashSpotController": {
+              "$path": "src/StarterPlayerScripts/ClientBootstrap/Controllers/TrashSpotController.luau"
+            }
+          }
+        }
       },
       "StarterCharacterScripts": {
         "$className": "StarterCharacterScripts",
@@ -42,4 +64,3 @@
     }
   }
 }
-

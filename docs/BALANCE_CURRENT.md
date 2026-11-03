@@ -140,7 +140,30 @@ Each zone is 300×300. Unlocks also require the previous zone itself. Diamond pi
 | Nuclear Wasteland | Radroach 2,180× | Mutant Hound 2,360× | Atomic Scorpion 2,540× | Reactor Golem 2,720× | Atomic Dragon 2,900× |
 | World's End Landfill | Scrapling Rat 3,250× | Landfill Hound 3,500× | Compactor Golem 3,750× | Methane Phoenix 4,025× | World Eater 4,300× |
 
-Base pet rarity weights are Common 45, Uncommon 30, Rare 15, Epic 9.9, and Legendary 0.1. There is no pity. Equip limit is three; multipliers add. The current equipped team is applied when the backpack is sold, while collection feedback shows base value plus mutation only. Mutation and pet value multipliers combine additively (`pet + mutation - 1`). Starting with Beach, every zone's Common pet is stronger than the previous zone's Legendary. Later egg and unlock prices are scaled against the preceding zone's increased expected pet income to preserve the target pacing.
+Base pet rarity weights are Common 45, Uncommon 30, Rare 15, Epic 9.9, and Legendary 0.1. There is no pity. Equip limit is three by default and five with the server-verified `+2 Equip Slots` pass; all equipped multipliers add. The current equipped team is applied when the backpack is sold, while collection feedback shows base value plus mutation only. Mutation and pet value multipliers combine additively (`pet + mutation - 1`). Starting with Beach, every zone's Common pet is stronger than the previous zone's Legendary. Later egg and unlock prices are scaled against the preceding zone's increased expected pet income to preserve the target pacing.
+
+Permanent +400% Egg Luck is implemented as five independent rolls using those base weights, keeping the rarest result. The resulting displayed/server odds are approximately Common 1.845%, Uncommon 21.885%, Rare 35.319%, Epic 40.452%, and Legendary 0.499%. Triple Hatch rolls this independently for each of its three pets.
+
+Permanent 2× Cash doubles the final value of trash sold at a sell center after mutation and current equipped-pet calculations. It does not multiply pet resale, `/addcash`, or Robux cash packages.
+
+Starter Pack grants $5,000, one non-sellable 50× Epic `StarterRecycler`, 15 minutes of 2× trash-sale cash, and 15 minutes of +100% egg luck. The temporary luck odds are approximately Common 20.25%, Uncommon 36%, Rare 24.75%, Epic 18.8001%, and Legendary 0.1999%. When stacked with Permanent +400% Luck, six rolls produce approximately 0.8304%, 16.9675%, 35.3462%, 46.2574%, and 0.5985% respectively. The repeatable Cash Boost also grants 15 minutes of 2× trash-sale cash, and distinct purchases extend the active expiry by 15 minutes each. Temporary cash from either source stacks with Permanent 2× Cash for a maximum 4× trash-sale multiplier.
+
+Pocket Cash, Cash Bag, and Cash Vault are repeatable Developer Products worth 5, 20, and 60 minutes of the highest unlocked zone's configured next-goal pace. Their grants are capped at 15%, 40%, and 80% of that goal respectively. The final zone substitutes ten World's End eggs for a missing next-zone unlock. These rewards do not use pet, mutation, permanent-cash, or temporary-cash multipliers. Current authoritative quotes are:
+
+| Highest unlocked zone | Pocket Cash | Cash Bag | Cash Vault |
+|---|---:|---:|---:|
+| Downtown | 2,850 | 7,600 | 15,200 |
+| Beach | 285,000 | 760,000 | 1,520,000 |
+| Factory | 4,600,000 | 18,400,000 | 36,800,000 |
+| Junkyard | 47,692,308 | 190,769,231 | 496,000,000 |
+| Sewers | 325,000,000 | 1,300,000,000 | 3,900,000,000 |
+| Frostbite Harbor | 2,000,000,000 | 8,000,000,000 | 24,000,000,000 |
+| Haunted Carnival | 5,454,545,455 | 21,818,181,818 | 65,454,545,455 |
+| Toxic Swamp | 125,000,000,000 | 500,000,000,000 | 1,500,000,000,000 |
+| Nuclear Wasteland | 1,615,384,615,385 | 6,461,538,461,538 | 19,384,615,384,615 |
+| World's End Landfill | 21,666,666,666,667 | 86,666,666,666,667 | 260,000,000,000,000 |
+
+Pet inventory starts at 50 slots. `Pets.StorageBonus` supplies non-pass permanent bonus slots, clamped by config. The active `+50 Pet Storage` pass adds 50 separately through a server-derived and clamped pass bonus, producing 100 slots before any normal storage bonus. Duplicate egg pets sell for a configured share of their originating zone egg price: Common 12%, Uncommon 18%, Rare 30%, Epic 55%, and Legendary 100%. At current rarity odds, the expected resale return is 20.845% of egg spend. Equipped pets cannot be sold until unequipped, and paid exclusive pets can opt out of resale through `CanSell = false`.
 
 ## Collection and skill check
 

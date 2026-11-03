@@ -45,12 +45,13 @@ Search for other explicit zone lists before assuming this list is exhaustive.
 ### 4. Create exact model templates
 
 ```text
+ServerStorage.ZoneModelTemplates.<ZoneKey>Zone
 ReplicatedStorage.TrashModels.<ZoneKey>_Small
 ReplicatedStorage.TrashModels.<ZoneKey>_Medium
 ReplicatedStorage.SellStationModels.<SellAreaConfig.ModelName>
 ```
 
-Every template must be a `Model`, contain at least one `BasePart`, have a correct `PrimaryPart`, be anchored as expected by the current clone/render code, and have a sensible pivot near its ground base. Small and medium must be different designs, not a simple scale change.
+The authored zone template must be a `Model` named exactly `<ZoneKey>Zone`, contain a `BasePart` named `Floor`, use that `Floor` as its `PrimaryPart`, and keep static environment geometry anchored. Every asset template must contain at least one `BasePart`, have a correct `PrimaryPart` where required, be anchored as expected by the current clone/render code, and have a sensible pivot near its ground base. Small and medium trash templates must be different designs, not a simple scale change.
 
 ### 5. Add UI asset slots
 

@@ -21,7 +21,7 @@ Early zones should feel fast and welcoming. Later zones should take increasingly
 7. Diamonds may drop on a successful collection.
 8. Sell the backpack at the zone's center sell station; the server applies the currently equipped pet team's multiplier at that moment.
 9. Spend cash on the zone egg and hatch pets.
-10. Equip up to three pets; their multipliers add together.
+10. Equip up to three pets by default, or five with the `+2 Equip Slots` pass; their multipliers add together.
 11. Hatch at least one pet from the current zone and save enough cash to unlock the next zone.
 12. Spend World 1 Diamonds on the shared World 1 tool crate and equip one tool.
 
@@ -64,8 +64,10 @@ World 2 is planned around the Solar System. Do not implement World 2 or decide W
 - One egg market exists per zone.
 - Each current zone egg contains five pets: Common, Uncommon, Rare, Epic, and Legendary.
 - There is no hatch pity system.
+- The permanent +400% Egg Luck pass performs five independent rarity rolls per egg and keeps the rarest result; the Starter Pack's temporary +100% boost uses two rolls, and stacking both uses six. Egg Menu percentages use the same shared formula.
+- Triple Hatch requires verified pass ownership. Fast Hatch owners can save an ON/OFF preference that skips the egg-shake sequence and goes directly to the result presentation.
 - New pets are not auto-equipped.
-- The default equipment limit is three pets.
+- The default equipment limit is three pets. The server-verified `+2 Equip Slots` pass raises it to five.
 - Equipped pet multipliers add: `17.1x + 8.2x + 15.3x = 40.6x`.
 - Pet income is applied when trash is sold, not when it is collected. Changing the equipped team before selling changes the sale multiplier for the backpack.
 - Equipped pets stay in their normal inventory position and are indicated by a star.
@@ -113,4 +115,4 @@ Mutation chances can be improved by the equipped tool. At collection time, the r
 
 ## Monetization direction
 
-The Shop menu is intended for Robux products rather than normal cash upgrades. Current/planned categories include starter pack, VIP, triple hatch, boosts, cash products, premium egg, and premium tools. Product effects and final commerce IDs must be treated as incomplete until verified in the implementation and marketplace configuration.
+The Shop menu is intended for Robux products rather than normal cash upgrades. Its current card order is Premium Pet, Starter Pack, permanent game passes, temporary boosts, and cash packs. The configured lineup is Premium Pet, Starter Pack, Triple Hatch, Fast Hatch, +2 Equip Slots, Permanent 2× Cash, +50 Pet Storage, Permanent +400% Egg Luck, temporary 2× Cash, Pocket Cash, Cash Bag, and Cash Vault. VIP and Auto Hatch are not part of the current design. The 12 supplied commerce IDs and planned effects live in `MonetizationConfig`; `ShopUI` retrieves live prices and has both purchase-prompt routes. Every product except Premium Pet is now enabled. Starter Pack is claimed once and grants $5,000, an unequipped 50× exclusive pet, 15 minutes of 2× sell cash, and 15 minutes of +100% egg luck. The repeatable 2× Cash Boost adds 15 minutes per persisted receipt. Permanent and temporary cash stack to 4× but never affect pet resale, admin grants, or Robux cash products. Cash packages instead grant server-calculated 5/20/60-minute progression bundles capped at 15%/40%/80% of the next goal, with receipt IDs persisted before acknowledgment.

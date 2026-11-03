@@ -8,7 +8,7 @@ Snapshot date: 2026-08-30. Verify each item against the live place before acting
 - World 2 is intended to be Solar System-themed but is not implemented.
 - Frostbite Harbor, Haunted Carnival, and Toxic Swamp replaceable UI slots are waiting for final uploaded Figma art. Verify whether Sewers also still needs final zone artwork.
 - Final pet 3D models/portraits for later zones may still use generated initials/placeholders; inspect assets before assuming they exist.
-- Robux Shop cards/art exist, but final product IDs, receipt effects, stacking rules, and production commerce validation are not complete unless proven in the live implementation.
+- Robux Shop cards and all 12 Marketplace IDs are configured, and the client can request live prices and route purchase prompts. Seven passes, the repeatable 2× Cash Boost, and all three cash packages are enabled with server-authoritative ownership/receipt handling. Only Premium Pet remains disabled because its receipt effect is not complete. Real production purchases for the enabled Developer Products still need verification; `StarterRecycler` intentionally reuses the Downtown raccoon model until dedicated art is supplied.
 - Balance is explicitly scheduled for later refinement. Current configs are playable targets, not final launch analytics tuning.
 - The project still contains `UpgradeService` and `ToolConfig.LegacyUpgradeTools`. These are compatibility/technical-debt paths after the design shifted toward a Robux Shop and Diamond tool crates.
 - Some comments in older configs may describe a feature as future/config-only even though its backend was later implemented. Trust behavior and tests over stale comments, then correct the comment.
@@ -24,7 +24,7 @@ Snapshot date: 2026-08-30. Verify each item against the live place before acting
 - One zone egg with five pets per zone.
 - No egg pity.
 - New pets do not auto-equip.
-- Three pet equip slots, additive multipliers.
+- Three pet equip slots by default, five with the server-verified `+2 Equip Slots` pass; additive multipliers.
 - One shared tool crate and Diamond wallet per world; physical entrance can appear in each zone.
 - One equipped tool.
 - Tools inventory contains tools only.
@@ -36,7 +36,7 @@ Snapshot date: 2026-08-30. Verify each item against the live place before acting
 
 - Final themes and balance for World 1 zones 9–10.
 - Rebirth system replacing the older Recycler concept.
-- Premium eggs and premium tools balance.
+- Premium Pet balance and final product contents.
 - Final pay-to-win boundaries and fair free-player pacing.
 - Retention systems, including future pets/eggs/events, after core gameplay and UI stability.
 - Whether backpack progression remains a cash upgrade, becomes shop/quest content, or is redesigned.
